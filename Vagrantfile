@@ -22,6 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		druid.vm.host_name = "druid.conde.vm"
 		#druid.vm.network "private_network", ip: "192.168.2.104"
 		druid.vm.network "forwarded_port", guest: 8081, host: 8081
+		druid.vm.network "forwarded_port", guest: 8084, host: 8084
 		druid.vm.network "forwarded_port", guest: 2181, host: 2181
 		druid.vm.network "forwarded_port", guest: 3306, host: 3307
 		#style.vm.network "forwarded_port", guest: 11420, host: 11420
